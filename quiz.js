@@ -15,7 +15,6 @@ for(let obj of kerdesek){
 }
 
 function ellenor(){
-    let szamlalo =0
     for(let obj of kerdesek){
         //console.log(obj.id)
         let kerdesObj=document.getElementsByName(obj.id)
@@ -24,17 +23,9 @@ function ellenor(){
             if(obj.checked)
                 if(obj.dataset.ok==1){
                     obj.style.accentColor="green"
-                    szamlalo++
-                    console.log(obj.name,"img")
-                    document.getElementById(obj.name).classList.remove('d-none')
                 }else
                     obj.style.accentColor="red"
         }
         console.log('********************')
-        if(szamlalo == kerdesek.length){
-            alert(`A ${kerdesek.length}-ből ${szamlalo} találtál el!`)
-        }else{
-            alert(`A ${kerdesek.length}-ből ${szamlalo} találtál el!`)
-        }
     }
 }
